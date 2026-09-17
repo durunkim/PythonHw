@@ -62,7 +62,7 @@ def show_menu():
 def run_menu():
     while True:
         show_menu()
-        choice = input("Choose an option (1-6): ")
+        choice = input("Choose an option (1-9): ")
 
         if choice == "1":
             action = input("Action: ")
@@ -70,14 +70,20 @@ def run_menu():
         elif choice == "2":
             undo_last_action()
         elif choice == "3":
+            print(undostack)
+        elif choice == "4":
             name = input("Enter player name: ")
             add_player(name)
-        elif choice == "4":
-            serve_next_player()
         elif choice == "5":
+            serve_next_player()
+        elif choice == "6":
+            print(player_queue)
+        elif choice == "7":
             quest = input("Enter quest name: ")
             add_quest(quest)
-        elif choice == "6":
+        elif choice == "8":
+            print(quest_data)
+        elif choice == "9":
             break
         else:
             print("Invalid choice, please enter a number from 1 to 6.")
